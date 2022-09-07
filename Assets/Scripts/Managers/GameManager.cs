@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CreateCharacters(playerPersistentData, defaultEnemySet);
+        TurnManager.instance.Begin();
     }
 
     void CreateCharacters(PlayerPersistentData playerData, CharacterSet enemyTeamSet)
