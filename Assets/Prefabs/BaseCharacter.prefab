@@ -784,6 +784,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a1f369ad19372468a0355191968266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterNameText: {fileID: 3286042735436644091}
+  healthText: {fileID: 3286042735484514149}
+  healthFill: {fileID: 3286042734781522928}
+  turnVisual: {fileID: 3286042734913623298}
 --- !u!1001 &3286042736563699350
 PrefabInstance:
   m_ObjectHideFlags: 0
