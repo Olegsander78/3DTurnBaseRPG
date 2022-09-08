@@ -6,7 +6,8 @@ public class Projectile : MonoBehaviour
 {
     public int damage;
     public int heal;
-    //effect
+    public Effect effectToApply;
+
     public float moveSpeed;
 
     private Character target;
@@ -32,7 +33,8 @@ public class Projectile : MonoBehaviour
             target.Heal(heal);
         }
 
-        //effect
+        if (effectToApply != null)
+            target.GetComponent<CharacterEffects>().AddnewEffect(effectToApply);
     }
 
     private void OnTriggerEnter(Collider other)

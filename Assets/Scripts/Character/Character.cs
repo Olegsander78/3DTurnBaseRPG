@@ -49,6 +49,7 @@ public class Character : MonoBehaviour
     void OnNewTurn()
     {
         characterUI.ToggleTurnVisual(TurnManager.instance.GetCurrentTurnCharacter() == this); ;
+        characterEffects.ApplyCurrentEffects();
     }
     public void CastCombatAction(CombatAction combatAction, Character target = null)
     {
