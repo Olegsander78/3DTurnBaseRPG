@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160574d3641ed7148b428c847aa3b398, type: 3}
   m_Name: Player0_Fireball
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
+  displayName: Fireball
+  description: Shoot a fireball which deals 6 damage over 3 turns
   projectilePrefab: {fileID: 0}

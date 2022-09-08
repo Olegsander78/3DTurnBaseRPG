@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0140b24f539212f45ae0e59ccc2eab3a, type: 3}
   m_Name: Player0_Heal
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
-  healAmount: 0
+  displayName: Heal
+  description: Heal a target 5 HP
+  healAmount: 5

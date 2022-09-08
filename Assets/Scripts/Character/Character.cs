@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Character : MonoBehaviour
 {
@@ -42,5 +43,30 @@ public class Character : MonoBehaviour
     void OnNewTurn()
     {
         characterUI.ToggleTurnVisual(TurnManager.instance.GetCurrentTurnCharacter() == this); ;
+    }
+    public void CastCombatAction(CombatAction combatAction, Character target = null)
+    {
+
+    }
+    public void TakeDamage(int damage)
+    {
+
+    }
+    public void Heal(int amount)
+    {
+
+    }
+    public void Die()
+    {
+
+    }
+    public void MoTotarget(Character target, UnityAction<Character> arriveCallback)
+    {
+
+    }
+
+    public void ToggleSelectionVisual(bool toggle)
+    {
+        selectionVisual.SetActive(toggle);
     }
 }

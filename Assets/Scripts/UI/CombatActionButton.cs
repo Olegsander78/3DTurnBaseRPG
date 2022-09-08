@@ -21,7 +21,7 @@ public class CombatActionButton : MonoBehaviour
     }
     public void OnClick()
     {
-
+        PlayerCombatManager.instance.SetCurrentCombatAction(combatAction);
     }
     public void OnHoverEnter()
     {
