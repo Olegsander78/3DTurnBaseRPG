@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class CombatAction : ScriptableObject
 {
     public string displayName;
-    public string discription;
+    public string description;
 
     public abstract void Cast(Character caster, Character target);
 }

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3286042734813085674, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
       propertyPath: m_Name
-      value: PlayerCharacter_0
+      value: PlayerCharacter_0 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3286042734813085677, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
       propertyPath: m_RootOrder
@@ -67,6 +67,22 @@ PrefabInstance:
       propertyPath: displayName
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: combatActions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: combatActions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: bd1a644c396d7e745a228fc01c36bbcc, type: 2}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: combatActions.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d08437f51a8b24488516740c6fa3f74, type: 2}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: combatActions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 245eb7d7c30fca54ba96135fd543e620, type: 2}
     - target: {fileID: 3286042736560485680, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

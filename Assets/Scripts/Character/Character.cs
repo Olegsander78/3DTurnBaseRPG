@@ -16,6 +16,9 @@ public class Character : MonoBehaviour
     public int curHp;
     public int maxHp;
 
+    [Header("Combat Actions")]
+    public CombatAction[] combatActions;
+
     [Header("Components")]
     public CharacterEffects characterEffects;
     public CharacterUI characterUI;
@@ -38,6 +41,6 @@ public class Character : MonoBehaviour
 
     void OnNewTurn()
     {
-        characterUI.ToggleTurnVisual(TurnManager.instance.GetCurrentCharacter() == this); ;
+        characterUI.ToggleTurnVisual(TurnManager.instance.GetCurrentTurnCharacter() == this); ;
     }
 }
