@@ -39,6 +39,12 @@ public class Character : MonoBehaviour
     {
         TurnManager.instance.onNewTurn -= OnNewTurn;
     }
+    private void Start()
+    {
+        standingPosition = transform.position;
+        characterUI.SetCharacterNameText(displayName);
+        characterUI.UpdateHealthBar(curHp, maxHp);
+    }
 
     void OnNewTurn()
     {
@@ -46,11 +52,18 @@ public class Character : MonoBehaviour
     }
     public void CastCombatAction(CombatAction combatAction, Character target = null)
     {
+        if (target == null)
+            target = this;
 
+        combatAction.Cast(this, target);
     }
     public void TakeDamage(int damage)
     {
+        curHp -= damage;
+        characterUI.UpdateHealthBar(curHp, maxHp);
 
+        if (curHp <= 0)
+            Die();
     }
     public void Heal(int amount)
     {
@@ -58,11 +71,28 @@ public class Character : MonoBehaviour
     }
     public void Die()
     {
-
+        Destroy(gameObject);
     }
-    public void MoTotarget(Character target, UnityAction<Character> arriveCallback)
+    public void MoveToTarget(Character target, UnityAction<Character> arriveCallback)
     {
+        StartCoroutine(MeleeAttackAnimation());
 
+        IEnumerator MeleeAttackAnimation()
+        {
+            while(transform.position != target.transform.position)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 10f * Time.deltaTime);
+                yield return null;
+            }
+
+            arriveCallback?.Invoke(target);
+
+            while (transform.position != standingPosition)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, standingPosition, 10f * Time.deltaTime);
+                yield return null;
+            }
+        }
     }
 
     public void ToggleSelectionVisual(bool toggle)
