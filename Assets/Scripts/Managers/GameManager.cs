@@ -73,4 +73,62 @@ public class GameManager : MonoBehaviour
         GameObject obj = Instantiate(characterPrefab, spawnPos.position, spawnPos.rotation);
         return obj.GetComponent<Character>();
     }
+    public void OnCharacterKilled(Character character)
+    {
+        allCharacters.Remove(character);
+
+        int playersRemaining = 0;
+        int enemiesRemaining = 0;
+
+        for (int i = 0; i < allCharacters.Count; i++)
+        {
+            if (allCharacters[i].team == Character.Team.Player)
+                playersRemaining++;
+            else
+                enemiesRemaining++;
+        }
+
+        // Did the player team win?
+        if (enemiesRemaining == 0)
+        {
+            PlayerTeamWins();
+        }
+        // Did the enemy team win?
+        else if (playersRemaining == 0)
+        {
+            EnemyTeamWins();
+        }
+    }
+    void PlayerTeamWins()
+    {
+        UpdatePlayerPersistentData();
+        Invoke(nameof(LoadMapScene), 0.5f);
+    }
+
+    // Called when the enemy team wins.
+    void EnemyTeamWins()
+    {
+        playerPersistentData.ResetCharacters();
+        Invoke(nameof(LoadMapScene), 0.5f);
+    }
+
+    void UpdatePlayerPersistentData()
+    {
+        for (int i = 0; i < playerTeam.Length; i++)
+        {
+            if (playerTeam[i] != null)
+            {
+                playerPersistentData.characters[i].health = playerTeam[i].curHp;
+            }
+            else
+            {
+                playerPersistentData.characters[i].isDead = true;
+            }
+        }
+    }
+
+    void LoadMapScene()
+    {
+        SceneManager.LoadScene("Map");
+    }
 }

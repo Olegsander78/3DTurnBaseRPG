@@ -80,6 +80,7 @@ public class Character : MonoBehaviour
     }
     public void Die()
     {
+        GameManager.instance.OnCharacterKilled(this);
         Destroy(gameObject);
     }
     public void MoveToTarget(Character target, UnityAction<Character> arriveCallback)
