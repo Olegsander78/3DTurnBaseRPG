@@ -29,12 +29,10 @@ public class Projectile : MonoBehaviour
             target.TakeDamage(damage);
 
         if (heal > 0)
-        {
             target.Heal(heal);
-        }
 
         if (effectToApply != null)
-            target.GetComponent<CharacterEffects>().AddnewEffect(effectToApply);
+            target.GetComponent<CharacterEffects>().AddNewEffect(effectToApply);
     }
 
     private void OnTriggerEnter(Collider other)

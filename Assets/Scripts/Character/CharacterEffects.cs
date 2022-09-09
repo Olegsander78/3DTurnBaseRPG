@@ -5,21 +5,21 @@ using UnityEngine;
 public class CharacterEffects : MonoBehaviour
 {
     private List<EffectInstance> curEffects = new List<EffectInstance>();
-    private Character Character;
+    private Character character;
 
     private void Awake()
     {
-        Character = GetComponent<Character>();
+        character = GetComponent<Character>();
     }
 
-    public void AddnewEffect(Effect effect)
+    public void AddNewEffect (Effect effect)
     {
         EffectInstance effectInstance = new EffectInstance(effect);
 
-        if (effect.activePrefab != null)
+        if(effect.activePrefab != null)
             effectInstance.curActiveGameobject = Instantiate(effect.activePrefab, transform);
 
-        if (effect.tickPrefab != null)
+        if(effect.tickPrefab != null)
             effectInstance.curTickParticle = Instantiate(effect.tickPrefab, transform).GetComponent<ParticleSystem>();
 
         curEffects.Add(effectInstance);
@@ -37,13 +37,13 @@ public class CharacterEffects : MonoBehaviour
     {
         effect.curTickParticle.Play();
 
-        if(effect.effect as DamageEffect)
+        if (effect.effect as DamageEffect)
         {
-            Character.TakeDamage((effect.effect as DamageEffect).damage);
+            character.TakeDamage((effect.effect as DamageEffect).damage);
         }
         else if (effect.effect as HealEffect)
         {
-            Character.Heal((effect.effect as HealEffect).heal);
+            character.Heal((effect.effect as HealEffect).heal);
         }
 
         effect.turnsRemaining--;

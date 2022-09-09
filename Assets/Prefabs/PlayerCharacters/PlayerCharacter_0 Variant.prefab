@@ -68,6 +68,10 @@ PrefabInstance:
       value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: healParticalPrefab
+      value: 
+      objectReference: {fileID: 1205760003084149444, guid: f01cc0880fe13be439671081da7dda16, type: 3}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
       propertyPath: combatActions.Array.size
       value: 3
       objectReference: {fileID: 0}

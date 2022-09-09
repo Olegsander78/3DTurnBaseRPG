@@ -129,11 +129,12 @@ MonoBehaviour:
   displayName: Character
   curHp: 10
   maxHp: 10
+  combatActions: []
   characterEffects: {fileID: 3286042734813085679}
   characterUI: {fileID: 3286042736709781381}
   selectionVisual: {fileID: 3286042736566756566}
   damageFlash: {fileID: 3286042736563699355}
-  healParticalPrefab: {fileID: 0}
+  healParticalPrefab: {fileID: 1205760003084149444, guid: f01cc0880fe13be439671081da7dda16, type: 3}
   standingPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &3286042734813085679
 MonoBehaviour:

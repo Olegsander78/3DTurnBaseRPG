@@ -11,6 +11,6 @@ public class EffectCombatAction : CombatAction
     public bool canEffectEnemy;
     public override void Cast(Character caster, Character target)
     {
-        target.characterEffects.AddnewEffect(effectToCast);
+        target.characterEffects.AddNewEffect(effectToCast);
     }
 }

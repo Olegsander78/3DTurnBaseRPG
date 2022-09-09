@@ -8,6 +8,6 @@ public class HealCombatAction : CombatAction
     public int healAmount;
     public override void Cast(Character caster, Character target)
     {
-        throw new System.NotImplementedException();
+        target.Heal(healAmount);
     }
 }
