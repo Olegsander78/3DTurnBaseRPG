@@ -16,3 +16,6 @@ MonoBehaviour:
   - characterPrefab: {fileID: 7077563324773367108, guid: c3ad9c7ecef1c0340863910a3573438e, type: 3}
     health: 20
     isDead: 0
+  - characterPrefab: {fileID: 1387701772796165189, guid: 1cbd893102bca35469f068d5ac645632, type: 3}
+    health: 30
+    isDead: 0

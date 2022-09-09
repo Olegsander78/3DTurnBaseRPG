@@ -19,6 +19,17 @@ public class GameManager : MonoBehaviour
     public CharacterSet defaultEnemySet;
 
     public static GameManager instance;
+    public static CharacterSet curEnemySet;
+
+    private void OnEnable()
+    {
+        Character.onCharacterDeath += OnCharacterKilled;
+    }
+
+    private void OnDisable()
+    {
+        Character.onCharacterDeath -= OnCharacterKilled;
+    }
 
     private void Awake()
     {
@@ -33,7 +44,11 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        CreateCharacters(playerPersistentData, defaultEnemySet);
+        if (curEnemySet == null)
+            CreateCharacters(playerPersistentData, defaultEnemySet);
+        else
+            CreateCharacters(playerPersistentData, curEnemySet);
+
         TurnManager.instance.Begin();
     }
 
@@ -73,7 +88,7 @@ public class GameManager : MonoBehaviour
         GameObject obj = Instantiate(characterPrefab, spawnPos.position, spawnPos.rotation);
         return obj.GetComponent<Character>();
     }
-    public void OnCharacterKilled(Character character)
+    void OnCharacterKilled(Character character)
     {
         allCharacters.Remove(character);
 
@@ -87,13 +102,11 @@ public class GameManager : MonoBehaviour
             else
                 enemiesRemaining++;
         }
-
-        // Did the player team win?
+        
         if (enemiesRemaining == 0)
         {
             PlayerTeamWins();
         }
-        // Did the enemy team win?
         else if (playersRemaining == 0)
         {
             EnemyTeamWins();
