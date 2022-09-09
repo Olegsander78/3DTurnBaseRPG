@@ -63,6 +63,8 @@ public class Character : MonoBehaviour
         curHp -= damage;
         characterUI.UpdateHealthBar(curHp, maxHp);
 
+        damageFlash.Flash();
+
         if (curHp <= 0)
             Die();
     }
