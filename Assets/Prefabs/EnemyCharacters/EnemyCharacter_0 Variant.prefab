@@ -67,5 +67,21 @@ PrefabInstance:
       propertyPath: healParticalPrefab
       value: 
       objectReference: {fileID: 1205760003084149444, guid: f01cc0880fe13be439671081da7dda16, type: 3}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: combatActions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: combatActions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b8a98ed7532645a43ab91254e04be017, type: 2}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: combatActions.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91ef6edf0e36b7e4394ddc1a925c630f, type: 2}
+    - target: {fileID: 3286042734813085678, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}
+      propertyPath: combatActions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 745400a71fca27643a5e4dc94e98f469, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2a5300eef724fd4c88e7542e6f3d8a4, type: 3}

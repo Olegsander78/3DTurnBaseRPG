@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846bc13a5cc14ab488fc59f8f27dfd58, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: 
-  durationOfTurns: 0
-  activePrefab: {fileID: 0}
-  tickPrefab: {fileID: 0}
-  heal: 0
+  durationOfTurns: 1
+  activePrefab: {fileID: 1205760003084149444, guid: f01cc0880fe13be439671081da7dda16, type: 3}
+  tickPrefab: {fileID: 1205760003084149444, guid: f01cc0880fe13be439671081da7dda16, type: 3}
+  heal: 10

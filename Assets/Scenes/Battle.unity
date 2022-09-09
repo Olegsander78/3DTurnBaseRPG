@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 47565864}
   - component: {fileID: 47565865}
   - component: {fileID: 47565866}
+  - component: {fileID: 47565867}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -212,6 +213,72 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   combatActionsUI: {fileID: 376588473}
+--- !u!114 &47565867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47565862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c2fb5830f8d8940922fa0de0be3d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWaitTime: 0.2
+  maxWaitTime: 1
+  attackWeakestChance: 0.7
+  healChanceCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0013427734
+      value: 0.9880371
+      inSlope: -0.1799229
+      outSlope: -0.1799229
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.05379833
+      value: 0.95688075
+      inSlope: -2.16267
+      outSlope: -2.16267
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.25058025
+    - serializedVersion: 3
+      time: 0.41147146
+      value: 0.53042626
+      inSlope: -2.680834
+      outSlope: -2.680834
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.6677928
+      value: 0.27068633
+      inSlope: -2.0824723
+      outSlope: -2.0824723
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.073145546
+    - serializedVersion: 3
+      time: 0.81848145
+      value: 0.010559082
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &74024538
 PrefabInstance:
   m_ObjectHideFlags: 0
